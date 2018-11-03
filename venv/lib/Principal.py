@@ -8,14 +8,16 @@ def draw(G, pos, custom_node_labels, pos_text_coordinates, measures, measure_nam
     fig1 = plt.figure()
     ax1 = fig1.add_subplot(111)
 
-    nx.draw(G, pos, with_labels=True, node_size=250, cmap=plt.cm.Blues,
+    nx.draw(G, pos, with_labels=True, node_size=600, cmap=plt.cm.Blues,
                                    node_color=list(measures.values()),
                                    nodelist=measures.keys(),
-                                ax=ax1)
-    nodes = nx.draw_networkx_nodes(G, pos, node_size=250, cmap=plt.cm.Blues,
+                                   ax=ax1,
+                                   alpha=0.8)
+    nodes = nx.draw_networkx_nodes(G, pos, node_size=600, cmap=plt.cm.Blues,
                                    node_color=list(measures.values()),
                                    nodelist=measures.keys(),
-                                   ax=ax1)
+                                   ax=ax1,
+                                   alpha=0.8)
 
     nodes.set_norm(mcolors.SymLogNorm(linthresh=0.01, linscale=1))
 
@@ -35,7 +37,7 @@ pos = {3:(3,3),5:(6,4),2:(3,5),0:(0,4),6:(6,2),4:(3,1),1:(0,2),7:(9,3),8:(12,3),
 
 pos_text_coordinates = {}
 for node, coords in pos.items():
-    pos_text_coordinates[node] = (coords[0], coords[1] - 0.24)
+    pos_text_coordinates[node] = (coords[0], coords[1] - 0.30)
 
 '''
 pos = {3:(2,3),5:(4,4),2:(2,5),0:(0,4),6:(4,2),4:(2,1),1:(0,2),7:(6,3),8:(8,3),9:(10,3)}
