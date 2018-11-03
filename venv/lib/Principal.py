@@ -11,13 +11,11 @@ def draw(G, pos, custom_node_labels, pos_text_coordinates, measures, measure_nam
     nx.draw(G, pos, with_labels=True, node_size=600, cmap=plt.cm.Blues,
                                    node_color=list(measures.values()),
                                    nodelist=measures.keys(),
-                                   ax=ax1,
-                                   alpha=0.8)
+                                   ax=ax1)
     nodes = nx.draw_networkx_nodes(G, pos, node_size=600, cmap=plt.cm.Blues,
                                    node_color=list(measures.values()),
                                    nodelist=measures.keys(),
-                                   ax=ax1,
-                                   alpha=0.8)
+                                   ax=ax1)
 
     nodes.set_norm(mcolors.SymLogNorm(linthresh=0.01, linscale=1))
 
