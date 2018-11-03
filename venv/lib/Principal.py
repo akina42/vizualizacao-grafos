@@ -8,11 +8,11 @@ def draw(G, pos, custom_node_labels, pos_text_coordinates, measures, measure_nam
     fig1 = plt.figure()
     ax1 = fig1.add_subplot(111)
 
-    nx.draw(G, pos, with_labels=True, node_size=600, cmap=plt.cm.Blues,
+    nx.draw(G, pos, with_labels=True, node_size=600, cmap=plt.cm.PuBu,
                                    node_color=list(measures.values()),
                                    nodelist=measures.keys(),
                                    ax=ax1)
-    nodes = nx.draw_networkx_nodes(G, pos, node_size=600, cmap=plt.cm.Blues,
+    nodes = nx.draw_networkx_nodes(G, pos, node_size=600, cmap=plt.cm.PuBu,
                                    node_color=list(measures.values()),
                                    nodelist=measures.keys(),
                                    ax=ax1)
